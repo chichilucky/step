@@ -1,5 +1,5 @@
 name: Refresh Step
-于:
+on:
 #  push:
 #    branches:
 #      - 'main'
