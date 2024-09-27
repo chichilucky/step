@@ -1,1 +1,22 @@
-1
+name: Refresh Step
+on:
+  push:
+    branches:
+      - 'main'
+  schedule:
+    - cron: '5 11 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 8
+        uses: actions/setup-java@v3
+        with:
+          java-version: '8'
+          distribution: 'temurin'
+          cache: maven
+      - name: Build with Maven Test
+        run: mvn install -Dmaven.test.skip=true
+      - name: run jar
+        run: java -jar target/RefreshStep.jar
