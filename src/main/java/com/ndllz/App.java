@@ -14,7 +14,7 @@ import java.util.Map;
  */
 public class App {
     public static void main(String[] args) {
-        Dict dict = YamlUtil.loadByPath("list.yml");
+        Dict dict = YamlUtil.loadByPath("list");
         Boolean enabled = dict.getBool("enabled");
         List<Map<String, Object>> userList = (List<Map<String, Object>>) dict.get("user");
         if (CollUtil.isEmpty(userList)) {
