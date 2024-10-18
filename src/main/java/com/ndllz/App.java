@@ -20,7 +20,7 @@ public class App {
         if (CollUtil.isEmpty(userList)) {
             return;
         }
-        int step = RandomUtil.randomInt(17000, 20000);
+        int step = RandomUtil.randomInt(19000, 22000);
         Console.log("step: {}", step);
         for (Map<String, Object> user : userList) {
             String account = String.valueOf(user.get("account"));
