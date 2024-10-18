@@ -1,10 +1,10 @@
 enabled: true
 user:
-  - account: 13175186609
-    password: xiaohe121
+  - account: process.env.USER_NAME || "userName",
+    password: process.env.PASSWORD || "password",
 
-  - account: 15658828783
-    password: xiaohe121
+  - account: process.env.USER_NAME1
+    password: process.env.PASSWORD1
 
-  - account: chichilucky@163.com
-    password: gggg9999
+  - account: process.env.USER_NAME2
+    password: process.env.PASSWORD2
